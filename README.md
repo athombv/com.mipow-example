@@ -10,6 +10,6 @@ Read the [Homey Apps SDK Documentation](https://apps.developer.homey.app) for mo
 
 The Mipow app uses Bluetooth Low Energy to connect with a variety of Mipow lights. 
 
-To make sure the lights turn on and off quickly the connection will not be closed. However, a polling mechanism has been implemented as well to synchronize the colors of the lights with Homey and quickly reconnect in case a light has been manually turned off.
+To make sure the lights turn on and off quickly the connection will not be closed. However, a polling mechanism has been implemented to synchronize the colors of the lights with Homey and quickly reconnect in case a light has been manually turned off.
 
-Each type of Mipow device can be identified by a service UUID which it exposes in the advertisement. The lights are being set by writing to the color characteristic `0000fffc00001000800000805f9b34fb` or to the animation characteristic `0000fffb00001000800000805f9b34fb`.  
+Each type of Mipow device can be identified by a service UUID which is exposed in the advertisement. The lights are being set by writing to the color characteristic `0000fffc00001000800000805f9b34fb` or to the animation characteristic `0000fffb00001000800000805f9b34fb`.  
