@@ -1,0 +1,27 @@
+{
+  "id": "com.mipow",
+  "version": "1.2.1",
+  "brandColor": "#EB0928",
+  "compatibility": ">=5.0.0",
+  "sdk": 3,
+  "name": {
+    "en": "MIPOW"
+  },
+  "description": {
+    "en": "Playbulb Color LED Lights"
+  },
+  "category": [
+    "lights"
+  ],
+  "permissions": [
+    "homey:wireless:ble"
+  ],
+  "images": {
+    "large": "/assets/images/large.jpg",
+    "small": "/assets/images/small.jpg"
+  },
+  "author": {
+    "name": "MIPOW",
+    "email": "support@athom.com"
+  }
+}

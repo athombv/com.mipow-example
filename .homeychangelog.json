@@ -1,0 +1,20 @@
+{
+  "1.0.0": {
+    "en": "First version."
+  },
+  "1.0.1": {
+    "en": "First version."
+  },
+  "1.1.0": {
+    "en": "Added Playbulb Smart support and upgraded application to SDK3"
+  },
+  "1.1.1": {
+    "en": "Added Playbulb Smart support and upgraded software for Homey 5.0.0"
+  },
+  "1.2.0": {
+    "en": "Added Some colorful animations"
+  },
+  "1.2.1": {
+    "en": "Make the app more future-proof"
+  }
+}

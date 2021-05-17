@@ -1,0 +1,285 @@
+{
+  "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
+  "id": "com.mipow",
+  "version": "1.2.1",
+  "brandColor": "#EB0928",
+  "compatibility": ">=5.0.0",
+  "sdk": 3,
+  "name": {
+    "en": "MIPOW"
+  },
+  "description": {
+    "en": "Playbulb Color LED Lights"
+  },
+  "category": [
+    "lights"
+  ],
+  "permissions": [
+    "homey:wireless:ble"
+  ],
+  "images": {
+    "large": "/assets/images/large.jpg",
+    "small": "/assets/images/small.jpg"
+  },
+  "author": {
+    "name": "MIPOW",
+    "email": "support@athom.com"
+  },
+  "flow": {
+    "actions": [
+      {
+        "id": "pulse",
+        "title": {
+          "en": "Set a pulse effect"
+        },
+        "titleFormatted": {
+          "en": "Set a [[smoothness]] pulse effect with color [[color]] and a delay of [[delay]]"
+        },
+        "args": [
+          {
+            "type": "color",
+            "name": "color",
+            "placeholder": {
+              "en": "#ff0000"
+            }
+          },
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=candle|rainbow|smart|sphere"
+          },
+          {
+            "name": "smoothness",
+            "title": {
+              "en": "Smoothness"
+            },
+            "type": "dropdown",
+            "default": "smooth",
+            "values": [
+              {
+                "id": "smooth",
+                "label": {
+                  "en": "Smooth"
+                }
+              },
+              {
+                "id": "not_smooth",
+                "label": {
+                  "en": "Not smooth"
+                }
+              }
+            ]
+          },
+          {
+            "type": "range",
+            "name": "delay",
+            "min": 0,
+            "max": 255,
+            "step": 1,
+            "label": "ms",
+            "labelMultiplier": 1,
+            "labelDecimals": 0
+          }
+        ]
+      },
+      {
+        "title": {
+          "en": "Set a rainbow effect"
+        },
+        "titleFormatted": {
+          "en": "Set a [[smoothness]] rainbow effect with a delay of [[delay]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=candle|rainbow|smart|sphere"
+          },
+          {
+            "name": "smoothness",
+            "title": {
+              "en": "Smoothness"
+            },
+            "type": "dropdown",
+            "default": "smooth",
+            "values": [
+              {
+                "id": "smooth",
+                "label": {
+                  "en": "Smooth"
+                }
+              },
+              {
+                "id": "not_smooth",
+                "label": {
+                  "en": "Not smooth"
+                }
+              }
+            ]
+          },
+          {
+            "type": "range",
+            "name": "delay",
+            "min": 0,
+            "max": 255,
+            "step": 1,
+            "label": "ms",
+            "labelMultiplier": 1,
+            "labelDecimals": 0
+          }
+        ],
+        "id": "rainbow"
+      }
+    ]
+  },
+  "drivers": [
+    {
+      "id": "candle",
+      "name": {
+        "en": "Candle"
+      },
+      "class": "light",
+      "capabilities": [
+        "light_saturation",
+        "light_temperature",
+        "dim",
+        "light_hue",
+        "light_mode",
+        "onoff",
+        "measure_battery"
+      ],
+      "energy": {
+        "batteries": [
+          "AA",
+          "AA",
+          "AA"
+        ]
+      },
+      "images": {
+        "large": "/drivers/candle/assets/images/large.jpg",
+        "small": "/drivers/candle/assets/images/small.jpg"
+      },
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
+      "id": "rainbow",
+      "name": {
+        "en": "Rainbow"
+      },
+      "class": "light",
+      "capabilities": [
+        "light_saturation",
+        "light_temperature",
+        "dim",
+        "light_hue",
+        "light_mode",
+        "onoff"
+      ],
+      "energy": {
+        "approximation": {
+          "usageOn": 5.1,
+          "usageOff": 0.1
+        }
+      },
+      "images": {
+        "large": "/drivers/rainbow/assets/images/large.jpg",
+        "small": "/drivers/rainbow/assets/images/small.jpg"
+      },
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
+      "id": "smart",
+      "name": {
+        "en": "Smart"
+      },
+      "class": "light",
+      "capabilities": [
+        "light_saturation",
+        "light_temperature",
+        "dim",
+        "light_hue",
+        "light_mode",
+        "onoff"
+      ],
+      "energy": {
+        "approximation": {
+          "usageOn": 5.1,
+          "usageOff": 0.1
+        }
+      },
+      "images": {
+        "large": "/drivers/smart/assets/images/large.jpg",
+        "small": "/drivers/smart/assets/images/small.jpg"
+      },
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
+      "id": "sphere",
+      "name": {
+        "en": "Sphere"
+      },
+      "class": "light",
+      "capabilities": [
+        "light_saturation",
+        "light_temperature",
+        "dim",
+        "light_hue",
+        "light_mode",
+        "onoff"
+      ],
+      "images": {
+        "large": "/drivers/sphere/assets/images/large.jpg",
+        "small": "/drivers/sphere/assets/images/small.jpg"
+      },
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    }
+  ]
+}

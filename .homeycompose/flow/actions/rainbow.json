@@ -1,0 +1,47 @@
+{
+  "title": {
+    "en": "Set a rainbow effect"
+  },
+  "titleFormatted": {
+    "en": "Set a [[smoothness]] rainbow effect with a delay of [[delay]]"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=candle|rainbow|smart|sphere"
+    },
+    {
+      "name": "smoothness",
+      "title": {
+        "en": "Smoothness"
+      },
+      "type": "dropdown",
+      "default": "smooth",
+      "values": [
+        {
+          "id": "smooth",
+          "label": {
+            "en": "Smooth"
+          }
+        },
+        {
+          "id": "not_smooth",
+          "label": {
+            "en": "Not smooth"
+          }
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "name": "delay",
+      "min": 0,
+      "max": 255,
+      "step": 1,
+      "label": "ms",
+      "labelMultiplier": 1,
+      "labelDecimals": 0
+    }
+  ]
+}

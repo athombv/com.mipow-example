@@ -1,0 +1,40 @@
+{
+  "id": "candle",
+  "name": {
+    "en": "Candle"
+  },
+  "class": "light",
+  "capabilities": [
+    "light_saturation",
+    "light_temperature",
+    "dim",
+    "light_hue",
+    "light_mode",
+    "onoff",
+    "measure_battery"
+  ],
+  "energy": {
+    "batteries": [
+      "AA",
+      "AA",
+      "AA"
+    ]
+  },
+  "images": {
+    "large": "/drivers/candle/assets/images/large.jpg",
+    "small": "/drivers/candle/assets/images/small.jpg"
+  },
+  "pair": [
+    {
+      "id": "list_devices",
+      "template": "list_devices",
+      "navigation": {
+        "next": "add_devices"
+      }
+    },
+    {
+      "id": "add_devices",
+      "template": "add_devices"
+    }
+  ]
+}
